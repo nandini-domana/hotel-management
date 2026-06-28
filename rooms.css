@@ -60,7 +60,7 @@ body{
     height:50vh;
     background:
     linear-gradient(rgba(75,0,130,.55),rgba(20,20,60,.55)),
-    url("images/hotel.jpg");
+    url("hotel.jpg");
 
     background-size:cover;
     background-position:center;
