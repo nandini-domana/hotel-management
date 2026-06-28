@@ -11,7 +11,7 @@ body{
     justify-content:center;
     align-items:center;
 
-    background:url("images/hotel.jpg") no-repeat center center/cover;
+    background:url("hotel.jpg") no-repeat center center/cover;
 }
 
 .container{
