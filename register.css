@@ -1,0 +1,191 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f4f4f4;
+}
+
+.container{
+    width:95%;
+    max-width:1200px;
+    height:700px;
+    display:flex;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,0.3);
+}
+
+/* Left Side */
+
+.left-panel{
+    width:50%;
+    background:
+    linear-gradient(rgba(84,0,140,.55),rgba(25,20,90,.55)),
+    url("images/hotel.jpg");
+    background-size:cover;
+    background-position:center;
+    color:white;
+    display:flex;
+    align-items:center;
+}
+
+.overlay{
+    padding:70px;
+}
+
+.logo{
+    font-size:60px;
+    font-family:Georgia;
+    color:white;
+    line-height:65px;
+}
+
+.logo span{
+    display:block;
+    color:#FFD54F;
+    font-size:30px;
+    letter-spacing:6px;
+}
+
+.overlay h2{
+    margin-top:40px;
+    font-size:42px;
+}
+
+.overlay p{
+    margin-top:20px;
+    font-size:18px;
+    line-height:30px;
+}
+
+/* Right Side */
+
+.right-panel{
+    width:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f8f8ff;
+}
+
+.register-box{
+    width:430px;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    text-align:center;
+}
+
+.icon{
+    width:80px;
+    height:80px;
+    background:#6A0DAD;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:auto;
+    font-size:32px;
+}
+
+.register-box h2{
+    margin:20px 0;
+    color:#4B0082;
+}
+
+.input-box{
+    display:flex;
+    align-items:center;
+    border:1px solid #ddd;
+    border-radius:12px;
+    padding:12px;
+    margin:15px 0;
+}
+
+.input-box i{
+    color:#6A0DAD;
+    margin-right:10px;
+}
+
+.input-box input{
+    width:100%;
+    border:none;
+    outline:none;
+    font-size:16px;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(90deg,#7B2FF7,#4B0082);
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.03);
+}
+
+.login-link{
+    margin-top:20px;
+}
+
+.login-link a{
+    color:#6A0DAD;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.login-link a:hover{
+    color:#FFD54F;
+}
+
+/* Mobile */
+
+@media(max-width:900px){
+
+.container{
+    flex-direction:column;
+    height:auto;
+}
+
+.left-panel,
+.right-panel{
+    width:100%;
+}
+
+.left-panel{
+    height:300px;
+}
+
+.register-box{
+    width:90%;
+    margin:30px auto;
+}
+
+.overlay{
+    padding:40px;
+}
+
+.logo{
+    font-size:45px;
+}
+
+.overlay h2{
+    font-size:32px;
+}
+}
