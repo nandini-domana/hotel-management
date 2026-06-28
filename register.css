@@ -29,7 +29,7 @@ body{
     width:50%;
     background:
     linear-gradient(rgba(84,0,140,.55),rgba(25,20,90,.55)),
-    url("images/hotel.jpg");
+    url("hotel.jpg");
     background-size:cover;
     background-position:center;
     color:white;
