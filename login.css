@@ -37,7 +37,7 @@ body{
 
     background:
     linear-gradient(rgba(90,30,140,0.45), rgba(25,10,70,0.45)),
-    url("images/hotel.jpg");
+    url("hotel.jpg");
 
     background-size:cover;
     background-position:center;
