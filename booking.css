@@ -1,0 +1,157 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f6fb;
+}
+
+/* Navigation */
+
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#4B0082;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 80px;
+    z-index:1000;
+    box-shadow:0 3px 10px rgba(0,0,0,.3);
+}
+
+.logo{
+    color:#FFD700;
+    font-size:30px;
+    font-weight:bold;
+}
+
+.logo i{
+    margin-right:10px;
+}
+
+.navbar ul{
+    display:flex;
+    list-style:none;
+}
+
+.navbar ul li{
+    margin-left:30px;
+}
+
+.navbar ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+    transition:.3s;
+}
+
+.navbar ul li a:hover{
+    color:#FFD700;
+}
+
+/* Booking Section */
+
+.booking{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:120px 20px 60px;
+    background:
+    linear-gradient(rgba(75,0,130,.6),rgba(20,20,60,.6)),
+    url("hotel.jpg");
+    background-size:cover;
+    background-position:center;
+}
+
+.booking-box{
+    background:white;
+    width:500px;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+.booking-box h1{
+    text-align:center;
+    color:#4B0082;
+    margin-bottom:10px;
+}
+
+.booking-box p{
+    text-align:center;
+    color:#666;
+    margin-bottom:25px;
+}
+
+.booking-box input,
+.booking-box select,
+.booking-box textarea{
+    width:100%;
+    padding:14px;
+    margin-bottom:18px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    font-size:16px;
+}
+
+.booking-box label{
+    color:#4B0082;
+    font-weight:bold;
+}
+
+.booking-box button{
+    width:100%;
+    padding:15px;
+    background:#4B0082;
+    color:white;
+    border:none;
+    border-radius:30px;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.booking-box button:hover{
+    background:#FFD700;
+    color:#4B0082;
+}
+
+/* Footer */
+
+footer{
+    background:#250048;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.navbar{
+    flex-direction:column;
+    padding:20px;
+}
+
+.navbar ul{
+    margin-top:15px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.navbar ul li{
+    margin:10px;
+}
+
+.booking-box{
+    width:95%;
+}
+
+}
