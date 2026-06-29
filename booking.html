@@ -14,6 +14,7 @@
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 </head>
+
 <body>
 
 <nav class="navbar">
@@ -44,63 +45,65 @@ Hotel Paradise
 Reserve your dream room in just a few clicks.
 </p>
 
-<form>
+<form id="bookingForm">
 
-<input type="text"
+<input
+type="text"
+id="name"
 placeholder="Full Name"
 required>
 
-<input type="email"
+<input
+type="email"
+id="email"
 placeholder="Email Address"
 required>
 
-<input type="tel"
+<input
+type="tel"
+id="phone"
 placeholder="Phone Number"
 required>
 
-<select required>
+<select id="room" required>
 
-<option value="">
-Select Room
-</option>
+<option value="">Select Room</option>
 
-<option>
-Deluxe Room
-</option>
+<option value="Deluxe Room">Deluxe Room</option>
 
-<option>
-Premium Room
-</option>
+<option value="Premium Room">Premium Room</option>
 
-<option>
-Luxury Suite
-</option>
+<option value="Luxury Suite">Luxury Suite</option>
 
 </select>
 
 <label>Check-In</label>
 
-<input type="date"
+<input
+type="date"
+id="checkin"
 required>
 
 <label>Check-Out</label>
 
-<input type="date"
+<input
+type="date"
+id="checkout"
 required>
 
-<input type="number"
+<input
+type="number"
+id="guests"
 placeholder="Number of Guests"
 required>
 
 <textarea
+id="requests"
 placeholder="Special Requests"
-rows="4">
-</textarea>
+rows="4"></textarea>
 
-<button>
-
+<button type="submit">
 Book Now
-
 </button>
 
 </form>
@@ -112,13 +115,13 @@ Book Now
 <footer>
 
 <p>
-
 © 2026 Hotel Paradise | Luxury Redefined
-
 </p>
 
 </footer>
-<script type="module" src="js/booking.js"></script>
+
+<script type="module" src="booking.js"></script>
+
 </body>
 
 </html>
