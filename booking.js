@@ -1,5 +1,4 @@
-import { db } from "./firebase.js";
-
+import { auth, db } from "./firebase.js";
 import {
 
 collection,
@@ -30,6 +29,8 @@ const guests=document.getElementById("guests").value;
 try{
 
 await addDoc(collection(db,"bookings"),{
+
+uid: auth.currentUser.uid,
 
 name,
 
