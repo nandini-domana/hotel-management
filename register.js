@@ -12,37 +12,36 @@ import {
 const form = document.getElementById("registerForm");
 
 form.addEventListener("submit", async (e) => {
+  e.preventDefault();
 
-    e.preventDefault();
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const phone = document.getElementById("phone").value;
+  const password = document.getElementById("password").value;
+  const confirmPassword = document.getElementById("confirmPassword").value;
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const phone = document.getElementById("phone").value;
-    const password = document.getElementById("password").value;
+  // ✅ FIX: password check
+  if (password !== confirmPassword) {
+    alert("Passwords do not match!");
+    return;
+  }
 
-    try{
+  try {
+    const userCredential =
+      await createUserWithEmailAndPassword(auth, email, password);
 
-        const userCredential =
-        await createUserWithEmailAndPassword(auth,email,password);
+    await setDoc(doc(db, "users", userCredential.user.uid), {
+      name: name,
+      email: email,
+      phone: phone,
+      createdAt: new Date()
+    });
 
-        await setDoc(doc(db,"users",userCredential.user.uid),{
+    alert("Registration Successful");
 
-            name:name,
-            email:email,
-            phone:phone
+    window.location.href = "login.html";
 
-        });
-
-        alert("Registration Successful");
-
-        window.location.href="login.html";
-
-    }
-
-    catch(error){
-
-        alert(error.message);
-
-    }
-
+  } catch (error) {
+    alert(error.message);
+  }
 });
