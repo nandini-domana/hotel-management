@@ -9,6 +9,8 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 const form = document.getElementById("registerForm");
+console.log("Register JS Loaded");
+console.log(form);
 
 form.addEventListener("submit", async (e) => {
 
