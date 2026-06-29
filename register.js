@@ -12,36 +12,49 @@ import {
 const form = document.getElementById("registerForm");
 
 form.addEventListener("submit", async (e) => {
-  e.preventDefault();
 
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const phone = document.getElementById("phone").value;
-  const password = document.getElementById("password").value;
-  const confirmPassword = document.getElementById("confirmPassword").value;
+    e.preventDefault();
 
-  // ✅ FIX: password check
-  if (password !== confirmPassword) {
-    alert("Passwords do not match!");
-    return;
-  }
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const password = document.getElementById("password").value;
+    const confirmPassword = document.getElementById("confirmPassword").value;
 
-  try {
-    const userCredential =
-      await createUserWithEmailAndPassword(auth, email, password);
+    if (password !== confirmPassword) {
+        alert("Passwords do not match!");
+        return;
+    }
 
-    await setDoc(doc(db, "users", userCredential.user.uid), {
-      name: name,
-      email: email,
-      phone: phone,
-      createdAt: new Date()
-    });
+    try {
 
-    alert("Registration Successful");
+        const userCredential =
+        await createUserWithEmailAndPassword(
+            auth,
+            email,
+            password
+        );
 
-    window.location.href = "login.html";
+        await setDoc(
+            doc(db, "users", userCredential.user.uid),
+            {
+                name: name,
+                email: email,
+                phone: phone,
+                createdAt: new Date()
+            }
+        );
 
-  } catch (error) {
-    alert(error.message);
-  }
+        alert("Registration Successful!");
+
+        form.reset();
+
+        window.location.href = "login.html";
+
+    } catch (error) {
+
+        alert(error.message);
+
+    }
+
 });
