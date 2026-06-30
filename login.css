@@ -311,4 +311,18 @@ button:hover{
 
     color:#eee;
 }
+    .forgot{
+    text-align:right;
+    margin-top:15px;
+}
+
+.forgot a{
+    text-decoration:none;
+    color:#5B21B6;
+    font-weight:bold;
+}
+
+.forgot a:hover{
+    color:#FFD700;
+}
 }
