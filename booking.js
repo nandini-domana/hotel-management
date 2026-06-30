@@ -1,9 +1,7 @@
-import { auth, db } from "./firebase.js";
 import {
-
 collection,
-addDoc
-
+addDoc,
+getDocs
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 const form=document.getElementById("bookingForm");
@@ -26,11 +24,49 @@ const checkout=document.getElementById("checkout").value;
 
 const guests=document.getElementById("guests").value;
 
-try{
+  try{
+
+const snapshot = await getDocs(collection(db,"bookings"));
+
+let available = true;
+
+snapshot.forEach((doc)=>{
+
+const booking = doc.data();
+
+if(
+
+booking.room===room &&
+
+(
+
+(checkin>=booking.checkin && checkin<booking.checkout) ||
+
+(checkout>booking.checkin && checkout<=booking.checkout) ||
+
+(checkin<=booking.checkin && checkout>=booking.checkout)
+
+)
+
+){
+
+available=false;
+
+}
+
+});
+
+if(!available){
+
+alert("❌ Sorry! This room is already booked for the selected dates.");
+
+return;
+
+}
 
 await addDoc(collection(db,"bookings"),{
 
-uid: auth.currentUser.uid,
+uid:auth.currentUser.uid,
 
 name,
 
@@ -46,13 +82,15 @@ checkout,
 
 guests,
 
+status:"Confirmed",
+
 createdAt:new Date()
 
 });
 
-alert("Booking Successful");
+alert("✅ Booking Successful!");
 
-form.reset();
+window.location.href="success.html";
 
 }
 
