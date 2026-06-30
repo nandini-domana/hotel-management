@@ -88,10 +88,23 @@ createdAt:new Date()
 
 });
 
-alert("✅ Booking Successful!");
+const bookingId = Math.floor(Math.random()*100000);
 
-window.location.href="success.html";
+localStorage.setItem("bookingId",bookingId);
 
+localStorage.setItem("name",name);
+
+localStorage.setItem("email",email);
+
+localStorage.setItem("room",room);
+
+localStorage.setItem("checkin",checkin);
+
+localStorage.setItem("checkout",checkout);
+
+localStorage.setItem("guests",guests);
+
+window.location.href="receipt.html";
 }
 
 catch(error){
