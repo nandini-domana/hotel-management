@@ -32,3 +32,24 @@ alert(error.message);
 }
 
 });
+document.getElementById("forgotPassword").addEventListener("click",async()=>{
+
+const email=prompt("Enter your registered email");
+
+if(!email) return;
+
+try{
+
+await sendPasswordResetEmail(auth,email);
+
+alert("Password reset email sent successfully.");
+
+}
+
+catch(error){
+
+alert(error.message);
+
+}
+
+});
