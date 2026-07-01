@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Dashboard | Hotel Paradise</title>
+
+<link rel="stylesheet" href="admin.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<i class="fa-solid fa-hotel"></i>
+
+Hotel Paradise Admin
+
+</div>
+
+<ul>
+
+<li><a href="dashboard.html">Dashboard</a></li>
+
+<li><button id="logoutBtn">Logout</button></li>
+
+</ul>
+
+</nav>
+
+<section class="heading">
+
+<h1>
+
+<i class="fa-solid fa-user-shield"></i>
+
+Admin Dashboard
+
+</h1>
+
+<p>
+
+Manage users and hotel bookings.
+
+</p>
+
+</section>
+
+<!-- Statistics -->
+
+<section class="stats">
+
+<div class="card">
+
+<i class="fa-solid fa-users"></i>
+
+<h2 id="totalUsers">0</h2>
+
+<p>Total Users</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-calendar-check"></i>
+
+<h2 id="totalBookings">0</h2>
+
+<p>Total Bookings</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-bed"></i>
+
+<h2>3</h2>
+
+<p>Room Types</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-circle-check"></i>
+
+<h2>100%</h2>
+
+<p>System Status</p>
+
+</div>
+
+</section>
+
+<!-- Users -->
+
+<section class="table-section">
+
+<h2>
+
+Registered Users
+
+</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Name</th>
+
+<th>Email</th>
+
+<th>Phone</th>
+
+</tr>
+
+</thead>
+
+<tbody id="usersTable">
+
+</tbody>
+
+</table>
+
+</section>
+
+<!-- Bookings -->
+
+<section class="table-section">
+
+<h2>
+
+All Bookings
+
+</h2>
+<input
+type="text"
+id="searchBooking"
+placeholder="🔍 Search by Name, Email or Room">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Name</th>
+
+<th>Room</th>
+
+<th>Check-In</th>
+
+<th>Check-Out</th>
+
+<th>Guests</th>
+
+</tr>
+
+</thead>
+
+<tbody id="bookingsTable">
+
+</tbody>
+
+</table>
+
+</section>
+
+<script type="module" src="admin.js"></script>
+
+</body>
+
+</html>

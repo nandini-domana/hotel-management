@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Profile</title>
+
+<link rel="stylesheet" href="profile.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo">
+<i class="fa-solid fa-hotel"></i>
+Hotel Paradise
+</div>
+
+<ul>
+
+<li><a href="dashboard.html">Dashboard</a></li>
+
+<li><a href="booking.html">Book Room</a></li>
+
+<li><button id="logoutBtn">Logout</button></li>
+
+</ul>
+
+</nav>
+
+<div class="container">
+
+<div class="profile-card">
+
+<div class="avatar">
+
+<i class="fa-solid fa-user"></i>
+
+</div>
+
+<h1>My Profile</h1>
+
+<div class="info">
+
+<p>
+
+<strong>Name :</strong>
+
+<input type="text" id="name">
+
+</p>
+
+<p><strong>Email :</strong> <span id="email"></span></p>
+
+<p>
+
+<strong>Phone :</strong>
+
+<input type="text" id="phone">
+
+</p>
+<p><strong>Member Since :</strong> <span id="date"></span></p>
+
+</div>
+<button id="saveBtn">
+
+<i class="fa-solid fa-floppy-disk"></i>
+
+Save Changes
+
+</button>
+</div>
+
+</div>
+
+<script type="module" src="profile.js"></script>
+
+</body>
+
+</html>

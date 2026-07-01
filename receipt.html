@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Booking Receipt</title>
+
+<link rel="stylesheet" href="receipt.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="receipt">
+
+<h1>
+<i class="fa-solid fa-hotel"></i>
+Hotel Paradise
+</h1>
+
+<h2>Booking Receipt</h2>
+
+<hr>
+
+<p><strong>Booking ID :</strong> <span id="bookingId"></span></p>
+
+<p><strong>Name :</strong> <span id="name"></span></p>
+
+<p><strong>Email :</strong> <span id="email"></span></p>
+
+<p><strong>Room :</strong> <span id="room"></span></p>
+
+<p><strong>Check-In :</strong> <span id="checkin"></span></p>
+
+<p><strong>Check-Out :</strong> <span id="checkout"></span></p>
+
+<p><strong>Guests :</strong> <span id="guests"></span></p>
+
+<p><strong>Status :</strong>
+
+<span class="status">
+
+✅ Confirmed
+
+</span>
+
+</p>
+
+<div class="buttons">
+
+<button onclick="window.print()">
+
+<i class="fa-solid fa-print"></i>
+
+Print Receipt
+
+</button>
+
+<a href="dashboard.html">
+
+Go Dashboard
+
+</a>
+
+</div>
+
+</div>
+
+<script type="module" src="receipt.js"></script>
+
+</body>
+
+</html>
